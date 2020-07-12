@@ -1,0 +1,992 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greet",
+        "text": "hey"
+      },
+      {
+        "intent": "greet",
+        "text": "howdy"
+      },
+      {
+        "intent": "greet",
+        "text": "hey there"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "good evening"
+      },
+      {
+        "intent": "greet",
+        "text": "dear sir"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes"
+      },
+      {
+        "intent": "affirm",
+        "text": "yep"
+      },
+      {
+        "intent": "affirm",
+        "text": "yeah"
+      },
+      {
+        "intent": "affirm",
+        "text": "indeed"
+      },
+      {
+        "intent": "affirm",
+        "text": "that's right"
+      },
+      {
+        "intent": "affirm",
+        "text": "ok"
+      },
+      {
+        "intent": "affirm",
+        "text": "great"
+      },
+      {
+        "intent": "affirm",
+        "text": "right, thank you"
+      },
+      {
+        "intent": "affirm",
+        "text": "correct"
+      },
+      {
+        "intent": "affirm",
+        "text": "great choice"
+      },
+      {
+        "intent": "affirm",
+        "text": "sounds really good"
+      },
+      {
+        "intent": "chitchat/ask_name",
+        "text": "What's your name?"
+      },
+      {
+        "intent": "chitchat/ask_name",
+        "text": "What can I call you?"
+      },
+      {
+        "intent": "chitchat/ask_weather",
+        "text": "How's the weather?"
+      },
+      {
+        "intent": "chitchat/ask_weather",
+        "text": "Is it too hot outside?"
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "i'm looking for a place to eat"
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I want to grab lunch"
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "I am searching for a dinner spot"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 31,
+            "end": 36,
+            "value": "north",
+            "entity": "location"
+          }
+        ],
+        "text": "i'm looking for a place in the north of town"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "chinese",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "show me chinese restaurants"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 34,
+            "end": 39,
+            "value": "north",
+            "entity": "location"
+          }
+        ],
+        "text": "show me chines restaurants in the north"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 31,
+            "end": 37,
+            "value": "centre",
+            "entity": "location"
+          },
+          {
+            "start": 10,
+            "end": 17,
+            "value": "mexican",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "show me a mexican place in the centre"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "indian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "i am looking for an indian spot called olaolaolaolaolaola"
+      },
+      {
+        "intent": "restaurant_search",
+        "text": "search for restaurants"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 16,
+            "end": 20,
+            "value": "west",
+            "entity": "location"
+          }
+        ],
+        "text": "anywhere in the west"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 14,
+            "end": 19,
+            "value": "18328",
+            "entity": "location"
+          }
+        ],
+        "text": "anywhere near 18328"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 29,
+            "value": "asian fusion",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "I am looking for asian fusion food"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 29,
+            "end": 34,
+            "value": "29432",
+            "entity": "location"
+          }
+        ],
+        "text": "I am looking a restaurant in 29432"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 17,
+            "end": 38,
+            "value": "mexican indian fusion",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "I am looking for mexican indian fusion"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "central",
+            "entity": "location"
+          },
+          {
+            "start": 8,
+            "end": 14,
+            "value": "indian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "central indian restaurant"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "good bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "stop"
+      },
+      {
+        "intent": "goodbye",
+        "text": "end"
+      },
+      {
+        "intent": "goodbye",
+        "text": "farewell"
+      },
+      {
+        "intent": "goodbye",
+        "text": "Bye bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "have a good one"
+      }
+    ],
+    "regex_features": [
+      {
+        "name": "emailid",
+        "pattern": "[A-z0-9._%+-]+@[A-z0-9.-]+\\.[A-z.]{2,4}"
+      },
+      {
+        "name": "greet",
+        "pattern": "hey[^\\s]*"
+      },
+      {
+        "name": "zipcode",
+        "pattern": "[0-9]{5}"
+      }
+    ],
+    "lookup_tables": [],
+    "entity_synonyms": [
+      {
+        "value": "chinese",
+        "synonyms": [
+          "Chinese",
+          "Chines",
+          "chines"
+        ]
+      },
+      {
+        "value": "vegetarian",
+        "synonyms": [
+          "veggie",
+          "vegg"
+        ]
+      },
+      {
+        "value": "mexican",
+        "synonyms": [
+          "Mexicn",
+          "Mexican",
+          "mxican"
+        ]
+      },
+      {
+        "value": "italian",
+        "synonyms": [
+          "Italian",
+          "Italin",
+          "Itlian"
+        ]
+      },
+      {
+        "value": "american",
+        "synonyms": [
+          "American",
+          "americn",
+          "amrican"
+        ]
+      },
+      {
+        "value": "south indian",
+        "synonyms": [
+          "South Indian",
+          "South indian",
+          "south Indian"
+        ]
+      },
+      {
+        "value": "north indian",
+        "synonyms": [
+          "North Indian",
+          "North indian",
+          "north Indian"
+        ]
+      },
+      {
+        "value": "ahmedabad",
+        "synonyms": [
+          "Ahmedabad",
+          "Ahmedbad",
+          "Ahmeadbad"
+        ]
+      },
+      {
+        "value": "Bengaluru",
+        "synonyms": [
+          "bengaluru",
+          "bangalore",
+          "Bangalur",
+          "Bangalore"
+        ]
+      },
+      {
+        "value": "chennai",
+        "synonyms": [
+          "chenai",
+          "chenni",
+          "madras"
+        ]
+      },
+      {
+        "value": "delhi",
+        "synonyms": [
+          "New Delhi",
+          "Delli",
+          "Dilli"
+        ]
+      },
+      {
+        "value": "hyderabad",
+        "synonyms": [
+          "Hyderabad",
+          "hyderbad",
+          "hyderabd"
+        ]
+      },
+      {
+        "value": "kolkata",
+        "synonyms": [
+          "Kolkata",
+          "Calcutta",
+          "Kolkatta"
+        ]
+      },
+      {
+        "value": "mumbai",
+        "synonyms": [
+          "Mumbai",
+          "Bombai",
+          "Bombay"
+        ]
+      },
+      {
+        "value": "pune",
+        "synonyms": [
+          "Pne",
+          "Puna",
+          "puna"
+        ]
+      },
+      {
+        "value": "agra",
+        "synonyms": [
+          "Agra"
+        ]
+      },
+      {
+        "value": "ajmer",
+        "synonyms": [
+          "Ajmer",
+          "ajmr"
+        ]
+      },
+      {
+        "value": "allahabad",
+        "synonyms": [
+          "Allahbad",
+          "Alahabad",
+          "Illahabad",
+          "Prayagraj"
+        ]
+      },
+      {
+        "value": "amravati",
+        "synonyms": [
+          "Amrvati",
+          "Amravatti",
+          "Amaravati"
+        ]
+      },
+      {
+        "value": "amritsar",
+        "synonyms": [
+          "amratsar",
+          "amaritsar",
+          "amrtsar"
+        ]
+      },
+      {
+        "value": "aurangabad",
+        "synonyms": [
+          "arangbad",
+          "aurangabd"
+        ]
+      },
+      {
+        "value": "bareilly",
+        "synonyms": [
+          "barelly"
+        ]
+      },
+      {
+        "value": "belgaum",
+        "synonyms": [
+          "Belgam",
+          "Belegaum",
+          "Belegam"
+        ]
+      },
+      {
+        "value": "bhopal",
+        "synonyms": [
+          "Bhopa",
+          "Bhopl",
+          "Bhopal"
+        ]
+      },
+      {
+        "value": "bhubaneswar",
+        "synonyms": [
+          "Bhuvaneswar",
+          "Bhubaneshwar"
+        ]
+      },
+      {
+        "value": "bikaner",
+        "synonyms": [
+          "Bikaner"
+        ]
+      },
+      {
+        "value": "chandigarh",
+        "synonyms": [
+          "Chandigarh",
+          "Chandigadh",
+          "Chandigar"
+        ]
+      },
+      {
+        "value": "coimbatore",
+        "synonyms": [
+          "Coimbatore",
+          "cbe",
+          "Coimbator"
+        ]
+      },
+      {
+        "value": "Cuttack",
+        "synonyms": [
+          "Cuttck",
+          "Cuttak"
+        ]
+      },
+      {
+        "value": "dehradun",
+        "synonyms": [
+          "Dehradun",
+          "Deharadun"
+        ]
+      },
+      {
+        "value": "erode",
+        "synonyms": [
+          "Erode"
+        ]
+      },
+      {
+        "value": "ghaziabad",
+        "synonyms": [
+          "Gaziabad",
+          "Ghazibad",
+          "Ghaziabad"
+        ]
+      },
+      {
+        "value": "gorakhpur",
+        "synonyms": [
+          "Gorakpur",
+          "Gorkhpur",
+          "Gorakhpur"
+        ]
+      },
+      {
+        "value": "gulbarga",
+        "synonyms": [
+          "Gulbrga",
+          "Gulbarg",
+          "Gulbarga"
+        ]
+      },
+      {
+        "value": "guntur",
+        "synonyms": [
+          "Guntr",
+          "Gantur",
+          "Guntur"
+        ]
+      },
+      {
+        "value": "gurgaon",
+        "synonyms": [
+          "Gurugaon",
+          "Gurugram",
+          "Gurgao"
+        ]
+      },
+      {
+        "value": "guwahati",
+        "synonyms": [
+          "Gowahati",
+          "Guwahathi",
+          "Guwahati"
+        ]
+      },
+      {
+        "value": "gwalior",
+        "synonyms": [
+          "Gwaliar",
+          "Ghwaliar",
+          "Gwalior"
+        ]
+      },
+      {
+        "value": "Hubli",
+        "synonyms": [
+          "Hobli",
+          "ubli"
+        ]
+      },
+      {
+        "value": "Dharwad",
+        "synonyms": [
+          "Darwad",
+          "dharwhad"
+        ]
+      },
+      {
+        "value": "indore",
+        "synonyms": [
+          "Indor",
+          "Indore"
+        ]
+      },
+      {
+        "value": "jabalpur",
+        "synonyms": [
+          "Jablpur",
+          "Jabalpur"
+        ]
+      },
+      {
+        "value": "jaipur",
+        "synonyms": [
+          "Jaipure",
+          "Jaypur",
+          "Jaipur"
+        ]
+      },
+      {
+        "value": "jalandhar",
+        "synonyms": [
+          "Jalandhr",
+          "Jalanadhar",
+          "Jalandar"
+        ]
+      },
+      {
+        "value": "jammu",
+        "synonyms": [
+          "Jammu"
+        ]
+      },
+      {
+        "value": "jamnagar",
+        "synonyms": [
+          "Jamanagar",
+          "Jamnagr",
+          "Jamnagar"
+        ]
+      },
+      {
+        "value": "jamshedpur",
+        "synonyms": [
+          "jamshedpure",
+          "Jamshedpur"
+        ]
+      },
+      {
+        "value": "jhansi",
+        "synonyms": [
+          "Jansi",
+          "Jhanasi",
+          "Jhansi"
+        ]
+      },
+      {
+        "value": "jodhpur",
+        "synonyms": [
+          "Jodpur",
+          "Jodhpure",
+          "Jodhpur"
+        ]
+      },
+      {
+        "value": "Kannur",
+        "synonyms": [
+          "Kanur"
+        ]
+      },
+      {
+        "value": "kanpur",
+        "synonyms": [
+          "cawnpur",
+          "Kaanpur",
+          "Kanpur"
+        ]
+      },
+      {
+        "value": "kakinada",
+        "synonyms": [
+          "Kakinda",
+          "Kakinad",
+          "Kakinada"
+        ]
+      },
+      {
+        "value": "Kochi",
+        "synonyms": [
+          "Cochi",
+          "cochin"
+        ]
+      },
+      {
+        "value": "Kottayam",
+        "synonyms": [
+          "Kotayam",
+          "Kottyam"
+        ]
+      },
+      {
+        "value": "kolhapur",
+        "synonyms": [
+          "Kolapur",
+          "Kohlapur",
+          "Kolhapur"
+        ]
+      },
+      {
+        "value": "kota",
+        "synonyms": [
+          "Kota"
+        ]
+      },
+      {
+        "value": "kozhikode",
+        "synonyms": [
+          "Kozhikod",
+          "Kozhikode"
+        ]
+      },
+      {
+        "value": "kurnool",
+        "synonyms": [
+          "Kurnol",
+          "Koornool",
+          "Kurnool"
+        ]
+      },
+      {
+        "value": "lucknow",
+        "synonyms": [
+          "Lucknow",
+          "Lko",
+          "Luknow"
+        ]
+      },
+      {
+        "value": "ludhiana",
+        "synonyms": [
+          "Ludiana",
+          "Ludhiana"
+        ]
+      },
+      {
+        "value": "madurai",
+        "synonyms": [
+          "Madurai"
+        ]
+      },
+      {
+        "value": "mathura",
+        "synonyms": [
+          "Matura",
+          "Mathura"
+        ]
+      },
+      {
+        "value": "mangalore",
+        "synonyms": [
+          "Mangalor",
+          "Manglore",
+          "Mangalore"
+        ]
+      },
+      {
+        "value": "meerut",
+        "synonyms": [
+          "Merut",
+          "Meerut"
+        ]
+      },
+      {
+        "value": "mysore",
+        "synonyms": [
+          "Mysor",
+          "Mysure"
+        ]
+      },
+      {
+        "value": "nagpur",
+        "synonyms": [
+          "Nagpure",
+          "Nagpor",
+          "Nagpur"
+        ]
+      },
+      {
+        "value": "nashik",
+        "synonyms": [
+          "Nasik",
+          "Nashik"
+        ]
+      },
+      {
+        "value": "nellore",
+        "synonyms": [
+          "Nellor",
+          "Nelore",
+          "Nellore"
+        ]
+      },
+      {
+        "value": "noida",
+        "synonyms": [
+          "greater Noida",
+          "G. Noida",
+          "Noida"
+        ]
+      },
+      {
+        "value": "patna",
+        "synonyms": [
+          "Patna"
+        ]
+      },
+      {
+        "value": "pondicherry",
+        "synonyms": [
+          "Puducherry",
+          "Puducherri",
+          "Pondi"
+        ]
+      },
+      {
+        "value": "raipur",
+        "synonyms": [
+          "Raipur"
+        ]
+      },
+      {
+        "value": "rajkot",
+        "synonyms": [
+          "Rjakot",
+          "Raajkot",
+          "Rajkot"
+        ]
+      },
+      {
+        "value": "rajahmundry",
+        "synonyms": [
+          "Rajamundry",
+          "Rajhmundry",
+          "Rajmundry"
+        ]
+      },
+      {
+        "value": "ranchi",
+        "synonyms": [
+          "Rancih",
+          "Ranchi"
+        ]
+      },
+      {
+        "value": "rourkela",
+        "synonyms": [
+          "Rourkel",
+          "Rorkela",
+          "Rourekla"
+        ]
+      },
+      {
+        "value": "salem",
+        "synonyms": [
+          "Selam",
+          "Selem",
+          "Salem"
+        ]
+      },
+      {
+        "value": "srinagar",
+        "synonyms": [
+          "Srinagr",
+          "Sirinagar",
+          "Sirnagar"
+        ]
+      },
+      {
+        "value": "surat",
+        "synonyms": [
+          "Surat"
+        ]
+      },
+      {
+        "value": "thiruvananthapuram",
+        "synonyms": [
+          "Trivandram",
+          "Thiruvanantapuram",
+          "Thiruvanthapuram"
+        ]
+      },
+      {
+        "value": "thrissur",
+        "synonyms": [
+          "Thirissur",
+          "Thrisur",
+          "Thirisur"
+        ]
+      },
+      {
+        "value": "Tiruchirappalli",
+        "synonyms": [
+          "Tiruchirapalli",
+          "Tiruchirappali",
+          "Tiruchirapali"
+        ]
+      },
+      {
+        "value": "tirunelveli",
+        "synonyms": [
+          "Trunelveli",
+          "Thirunelveli",
+          "Tirnelveli"
+        ]
+      },
+      {
+        "value": "ujjain",
+        "synonyms": [
+          "Ujain",
+          "Ujjan",
+          "Ujjain"
+        ]
+      },
+      {
+        "value": "bijapur",
+        "synonyms": [
+          "Bijpur",
+          "Bijapur"
+        ]
+      },
+      {
+        "value": "vadodara",
+        "synonyms": [
+          "Baroda",
+          "Vadodra",
+          "Vadodara"
+        ]
+      },
+      {
+        "value": "varanasi",
+        "synonyms": [
+          "Varansi",
+          "Banaras",
+          "Varanasi"
+        ]
+      },
+      {
+        "value": "vijayawada",
+        "synonyms": [
+          "Vijaywada",
+          "Vijayawada",
+          "Vijaiawada"
+        ]
+      },
+      {
+        "value": "Visakhapatnam",
+        "synonyms": [
+          "Visakapatnam",
+          "Vishakhapatnam",
+          "Vishakapatnam",
+          "Visakh"
+        ]
+      },
+      {
+        "value": "warangal",
+        "synonyms": [
+          "Warangal",
+          "Warengal"
+        ]
+      }
+    ]
+  }
+}
