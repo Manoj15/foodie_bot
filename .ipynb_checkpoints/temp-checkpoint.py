@@ -12,7 +12,7 @@ email_restaurant_list = []
 
 class ActionSearchRestaurants(Action):
 	def name(self):
-		return 'actions.ActionSearchRestaurants'
+		return 'action_search_restaurants'
 
 	def run(self, dispatcher, tracker, domain):
 		config={"user_key":"34e58384c8a9a49fc09ea68cd5ad7196"}
@@ -47,7 +47,7 @@ class ActionSearchRestaurants(Action):
 			# Build the response
 			response = ""
 			restaurant_exist = False
-			if len(budget_restaurant_sorted) == 0:
+			if len(d_budget_rating_sorted) == 0:
 				dispatcher.utter_message("Oops! no restaurant found for this query. :("+ "\n")
 
 			else:
@@ -88,7 +88,7 @@ class CheckLocation(Action):
 "Vasai-Virar City","Vijayawada","Visakhapatnam","Warangal"]
 
 	def name(self):
-		return "action_check_location"
+		return "check_location"
 
 	def run(self, dispatcher, tracker, domain):
 		loc = tracker.get_slot('location')
@@ -105,7 +105,7 @@ class CheckLocation(Action):
 class SendMail(Action):
 
 	def name(self):
-		return 'action_send_email'
+		return 'send_mail'
 
 	def run(self, dispatcher, tracker, domain):
 		# Get user's email id

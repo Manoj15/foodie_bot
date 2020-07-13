@@ -1,25 +1,33 @@
 slots:
   location:
     type: text
-  location_match:
-    type: categorical
-    values:
-    - zero
-    - one
+  is_location:
+      type: bool
+      initial_value: False
   cuisine:
-    type: text
-  budget:
-    type: text
-  email:
-    type: text
-  email_body:
-    type: text
+      type: text
+  min_range:
+      type: float
+      initial_value: 0.0
+  max_range:
+      type: float
+      initial_value:  10000.0
+  budget_ok:
+      type: bool
+      initial_value: False
+  emailid:
+      type: text
 
 entities:
 - location
 - cuisine
-- email
+- emailid
 - budget
+- is_location
+- min_range
+- max_range
+- budget_ok
+
 
 intents:
  - greet
@@ -113,5 +121,6 @@ actions:
 - utter_location_not_found
 - actions.ActionSearchRestaurants
 - actions.ActionValidateLocation
-- actions.ActionRestarted
 - actions.ActionSendEmail
+- action_check_location
+- action_send_email

@@ -1,9 +1,5 @@
 [
     {
-        "name": "emailid",
-        "pattern": "[A-z0-9._%+-]+@[A-z0-9.-]+\\.[A-z.]{2,4}"
-    },
-    {
         "name": "greet",
         "pattern": "hey[^\\s]*"
     },
