@@ -12,9 +12,6 @@ slots:
   max_range:
       type: float
       initial_value:  10000.0
-  budget_ok:
-      type: bool
-      initial_value: False
   emailid:
       type: text
 
@@ -22,41 +19,38 @@ entities:
 - location
 - cuisine
 - emailid
-- budget
 - is_location
 - min_range
 - max_range
-- budget_ok
 
 
 intents:
- - greet
- - affirm
- - deny
- - goodbye
- - send_email
- - inform
+- greet
+- affirm
+- deny
+- goodbye
+- send_mail
+- dont_send_mail
+- inform
+- restaurant_search
 
-templates:
+responses:
   utter_greet:
-    - "hey there! How may i help you"
-    - "Hi, How can I help you!"
-    - "Hey, How is it going. How May I help you Today"
+    - text: "hey there! How may i help you"
+    - text: "Hi, How can I help you!"
+    - text: "Hey, How is it going. How May I help you Today"
 
   utter_goodbye:
-    - "Goodbye :("
-    - "Bye-bye"
-    - "bye have a nice day"
-    - "happy eating bye bye"
+    - text: "Goodbye :("
+    - text: "Bye-bye"
+    - text: "bye have a nice day"
+    - text: "happy eating bye bye"
 
   utter_default:
-    - "default message"
-
-  utter_ask_howcanhelp:
-    - "how can I help you?"
+    - text: "default message"
 
   utter_ask_location:
-    - "In what location?"
+    - text: "In what location?"
 
   utter_ask_cuisine:
     - text: "What kind of cuisine would you prefer?"
@@ -85,31 +79,35 @@ templates:
         payload: '/restaurant_search{"min_range":"700","max_range":"10000"}'
 
   utter_sorry_dont_operate:
-    - "Sorry, we don’t operate in this city. Can you please specify some other location ? \n"
+    - text: "Sorry, we don’t operate in this city. Can you please specify some other location ? \n"
 
   utter_location_not_found:
-    - "Sorry, didn’t find any such location. Can you please tell again ? \n"
+    - text: "Sorry, didn’t find any such location. Can you please tell again ? \n"
 
   utter_searching:
-    - "Ok, let me find some good rating restaurants for your budget range... \n"
+    - text: "Ok, let me find some good rating restaurants for your budget range... \n"
 
   utter_ask_for_email_to_send:
-    - "Should I send you details of all the restaurants on email ? \n"
+    - text: "Should I send you details of all the restaurants on email ? \n"
+      buttons:
+      - title: "Yes"
+        payload: "/send_mail"
+      - title: "No"
+        payload: "/dont_send_mail"
 
   utter_ask_email_address:
-    - "To what email id should I send it to ? \n"
+    - text: "To what email id should I send it to ? \n"
 
   utter_email_sent:
-    - "Sent. Bon Appetit!"
+    - text: "Sent. Bon Appetit!"
 
   utter_no_email_sent:
-    - "Okay. Bon Appetit!"
+    - text: "Okay. Bon Appetit!"
 
 actions:
 - utter_greet
 - utter_goodbye
 - utter_default
-- utter_ask_howcanhelp
 - utter_ask_location
 - utter_ask_cuisine
 - utter_ask_for_email_to_send
@@ -119,8 +117,7 @@ actions:
 - utter_ask_budget
 - utter_searching
 - utter_location_not_found
-- actions.ActionSearchRestaurants
-- actions.ActionValidateLocation
-- actions.ActionSendEmail
 - action_check_location
+- action_restaurant
 - action_send_email
+- action_restart

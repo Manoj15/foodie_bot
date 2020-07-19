@@ -1,32 +1,12 @@
-from flask import session,flash
-import pandas as pd
-import numpy as np
-from flask import Response
-import os
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory,jsonify
-import tempfile
-import simplejson as j
-from rasa_nlu.training_data import load_data
-from rasa_nlu.config import RasaNLUModelConfig
-from rasa_nlu.model import Trainer
-from rasa_nlu.model import Metadata, Interpreter
-import json
-app = Flask(__name__)
+from rasa_core.channels.slack import SlackInput
+#from rasa_core.channels.channel import HttpInputChannel
+from rasa_core.agent import Agent
+from rasa_core.interpreter import RasaNLUInterpreter
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+nlu_interpreter = RasaNLUInterpreter('./models/nlu/default/restaurantnlu')
+agent = Agent.load('./models/dialogue', interpreter = nlu_interpreter)
 
-interpreter = Interpreter.load('./models/nlu/default/restaurantnlu')
-@app.route('/nlu_parsing', methods=['POST'])
-def transform():
-    if request.headers['Content-Type'] == 'application/json':
-        query = request.json.get("utterance")
-        results=interpreter.parse(query)
-        js = json.dumps(results)
-        resp = Response(js, status=200, mimetype='application/json')
-        return resp
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
+input_channel = SlackInput('xoxp-462633319383-4617723817957-462990291990-0e9fe2873de8ea28051f3ecce978b08e', #app verification token
+							'xoxb-462633319383-46178426864231-4hPvkcIFZDtvZbqHlc082i3Y', # bot verification token
+							'8ajLnkhZaUxh6ATMJNl49v65avM', # slack verification token
+							True)

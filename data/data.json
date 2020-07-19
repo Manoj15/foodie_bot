@@ -6,13 +6,17 @@
         "pattern": "[0-9]{5}"
       },
       {
+        "name": "emailid",
+        "pattern": "[A-z0-9._%+-]+@[A-z0-9.-]+\\.[A-z.]{2,4}"
+      },
+      {
         "name": "greet",
         "pattern": "hey[^\\s]*"
       }
     ],
     "entity_synonyms": [
       {
-        "value": "chinese",
+        "value": "Chinese",
         "synonyms": [
           "Chinese",
           "Chines",
@@ -27,7 +31,7 @@
         ]
       },
       {
-        "value": "mexican",
+        "value": "Mexican",
         "synonyms": [
           "Mexicn",
           "Mexican",
@@ -43,7 +47,7 @@
         ]
       },
       {
-        "value": "american",
+        "value": "American",
         "synonyms": [
           "American",
           "americn",
@@ -51,11 +55,11 @@
         ]
       },
       {
-        "value": "south indian",
+        "value": "South India",
         "synonyms": [
           "South Indian",
           "South indian",
-          "south Indian"
+          "south indian"
         ]
       },
       {
@@ -1267,6 +1271,18 @@
             "end": 41,
             "value": "North Delhi",
             "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "m@gmail.com",
+        "intent": "send_mail",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "m@gmail.com",
+            "entity": "emailid"
           }
         ]
       }
