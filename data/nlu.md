@@ -4,6 +4,7 @@
 - Hey
 - Heyyy
 - Hello
+- Heya
 
 ## intent:restaurant_search
 - I’m hungry. Looking out for some good restaurants
@@ -25,6 +26,8 @@
 - restauarnt
 - in [cochi]{"entity": "location", "value": "Kochi"}
 - [Italian]{"entity": "cuisine", "value": "italian"}
+- show me a restauarant in [chennai](location)
+- [North Indian]{"entity": "cuisine", "value": "north indian"}
 
 ## intent:inform
 - [bangalore](location)
@@ -35,7 +38,8 @@
 - in [mangalore](location)
 - please send to [manhojkummar@gmail.com](emailid)
 - [bangalore]{"entity": "location", "value": "Bengaluru"}
-- [manhojkummar@gmail.com](emailid)
+- send it to [manhojkummar@gmail.com](emailid)
+- [mangalore](location)
 
 ## synonym:Bengaluru
 - bangalore
@@ -52,6 +56,9 @@
 
 ## synonym:chinese
 - Chinese
+
+## synonym:italian
+- Italian
 
 ## synonym:mexican
 - Mexican

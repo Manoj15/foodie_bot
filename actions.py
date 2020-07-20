@@ -2,12 +2,18 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import unicode_literals
 
+# Importing Rasa Modules
 from rasa_sdk import Action
 from rasa_sdk.events import SlotSet
 from rasa_core_sdk.events import AllSlotsReset
 from rasa_core_sdk.events import Restarted
+
+# Importing Zomato module
 import zomatopy
+
 import json
+
+# Importing Email module
 from email.message import EmailMessage
 import smtplib
 email_restaurant_list = []
@@ -17,22 +23,20 @@ class ActionSearchRestaurants(Action):
 		return 'action_restaurant'
 
 	def run(self, dispatcher, tracker, domain):
+		# Setting the Zomato API token
 		config={"user_key":"34e58384c8a9a49fc09ea68cd5ad7196"}
 		zomato = zomatopy.initialize_app(config)
-		# Get cuisine and min/max budget range from slot
+		# Get cuisine, min/max budget range and location from slot
 		cuisine = tracker.get_slot('cuisine')
 		min_range = float(tracker.get_slot('min_range'))
 		max_range = float(tracker.get_slot('max_range'))
 		loc = tracker.get_slot('location')
 
-
-
 		location_detail=zomato.get_location(loc, 1)
 		d1 = json.loads(location_detail)
 		lat=d1["location_suggestions"][0]["latitude"]
 		lon=d1["location_suggestions"][0]["longitude"]
-		# cuisines_dict = {'American': 1, 'Chinese': 25, 'Italian': 55,
-        #                  'Mexican': 73, 'North Indiann': 50, 'South Indian': 85}
+
 
 		cuisines_dict = {'american': 1, 'chinese': 25, 'italian': 55,
                          'mexican': 73, 'north indian': 50, 'south indian': 85}
@@ -68,6 +72,7 @@ class ActionSearchRestaurants(Action):
 			return [SlotSet('location', loc)]
 
 class CheckLocation(Action):
+#Checking if location falls into tier1 or tier2 cities
 
 	city_list = []
 
@@ -106,6 +111,7 @@ class CheckLocation(Action):
 		return loc.lower() in self.city_list
 
 class SendMail(Action):
+#Send Restaurant List to given Email
 
 	def name(self):
 		return 'action_send_email'

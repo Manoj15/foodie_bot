@@ -228,3 +228,73 @@
     - slot{"emailid": "manhojkummar@gmail.com"}
     - action_send_email
     - utter_email_sent
+
+## interactive_story_13
+* greet
+    - utter_greet
+* restaurant_search{"location": "chennai"}
+    - slot{"location": "chennai"}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "italian"}
+    - slot{"cuisine": "italian"}
+    - action_check_location
+    - slot{"location": "chennai"}
+    - slot{"is_location": true}
+    - action_restaurant
+    - slot{"location": "chennai"}
+    - utter_ask_for_email_to_send
+    - utter_ask_for_email_to_send
+* send_mail
+    - utter_ask_email_address
+* inform{"emailid": "manhojkummar@gmail.com"}
+    - slot{"emailid": "manhojkummar@gmail.com"}
+    - action_send_email
+    - utter_goodbye
+
+## interactive_story_14
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* restaurant_search{"location": "Kochi"}
+    - slot{"location": "Kochi"}
+    - action_check_location
+    - slot{"location": "Kochi"}
+    - slot{"is_location": true}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "south indian"}
+    - slot{"cuisine": "south indian"}
+    - utter_ask_budget
+* restaurant_search{"min_range": "300", "max_range": "700"}
+    - slot{"max_range": "700"}
+    - slot{"min_range": "300"}
+    - action_restaurant
+    - slot{"location": "Kochi"}
+    - utter_ask_for_email_to_send
+* dont_send_mail
+    - utter_no_email_sent
+    - utter_goodbye
+
+## interactive_story_15
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* inform{"location": "mangalore"}
+    - slot{"location": "mangalore"}
+    - action_check_location
+    - slot{"location": "mangalore"}
+    - slot{"is_location": true}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "north indian"}
+    - slot{"cuisine": "north indian"}
+    - utter_ask_budget
+* restaurant_search{"min_range": "300", "max_range": "700"}
+    - slot{"max_range": "700"}
+    - slot{"min_range": "300"}
+    - action_restaurant
+    - slot{"location": "mangalore"}
+    - utter_ask_for_email_to_send
+* dont_send_mail
+    - utter_no_email_sent
+    - utter_goodbye
