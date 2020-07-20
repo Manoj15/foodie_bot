@@ -24,8 +24,7 @@
 - in [cochin]{"entity": "location", "value": "Kochi"}
 - restauarnt
 - in [cochi]{"entity": "location", "value": "Kochi"}
-- in [delhi](location)
-- [Chinese]{"entity": "cuisine", "value": "chinese"}
+- [Italian]{"entity": "cuisine", "value": "italian"}
 
 ## intent:inform
 - [bangalore](location)
@@ -35,6 +34,8 @@
 - [thecurvefitter@gmail.com](emailid)
 - in [mangalore](location)
 - please send to [manhojkummar@gmail.com](emailid)
+- [bangalore]{"entity": "location", "value": "Bengaluru"}
+- [manhojkummar@gmail.com](emailid)
 
 ## synonym:Bengaluru
 - bangalore

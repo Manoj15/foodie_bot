@@ -20,7 +20,7 @@
     - utter_ask_for_email_to_send
 * send_mail
     - utter_ask_email_address
-* inform{"emailid": "manhojkummar@gmail.com"}
+* send_mail{"emailid": "manhojkummar@gmail.com"}
     - slot{"emailid": "manhojkummar@gmail.com"}
     - action_send_email
 
@@ -46,7 +46,7 @@
     - utter_ask_for_email_to_send
 * send_mail
     - utter_ask_email_address
-* inform{"emailid": "thecurvefitter@gmail.com"}
+* send_mail{"emailid": "thecurvefitter@gmail.com"}
     - slot{"emailid": "thecurvefitter@gmail.com"}
     - action_send_email
 
@@ -93,7 +93,7 @@
     - utter_ask_for_email_to_send
 * send_mail
     - utter_ask_email_address
-* inform{"emailid": "thecurvefitter@gmail.com"}
+* send_mail{"emailid": "thecurvefitter@gmail.com"}
     - slot{"emailid": "thecurvefitter@gmail.com"}
     - action_send_email
     - utter_email_sent
@@ -120,7 +120,7 @@
     - utter_ask_for_email_to_send
 * send_mail
     - utter_ask_email_address
-* inform{"emailid": "manhojkummar@gmail.com"}
+* send_mail{"emailid": "manhojkummar@gmail.com"}
     - slot{"emailid": "manhojkummar@gmail.com"}
     - action_send_email
     - utter_email_sent
@@ -147,7 +147,7 @@
     - utter_ask_for_email_to_send
 * send_mail
     - utter_ask_email_address
-* inform{"emailid": "thecurvefitter@gmail.com"}
+* send_mail{"emailid": "thecurvefitter@gmail.com"}
     - slot{"emailid": "thecurvefitter@gmail.com"}
     - action_send_email
     - utter_email_sent
@@ -197,7 +197,34 @@
     - utter_ask_for_email_to_send
 * send_mail
     - utter_ask_for_email_to_send
-* inform{"emailid": "manhojkummar@gmail.com"}
+* send_mail{"emailid": "manhojkummar@gmail.com"}
+    - slot{"emailid": "manhojkummar@gmail.com"}
+    - action_send_email
+    - utter_email_sent
+
+## interactive_story_12
+* greet
+    - utter_greet
+* restaurant_search
+    - utter_ask_location
+* inform{"location": "Bengaluru"}
+    - slot{"location": "Bengaluru"}
+    - action_check_location
+    - slot{"location": "Bengaluru"}
+    - slot{"is_location": true}
+    - utter_ask_cuisine
+* restaurant_search{"cuisine": "italian"}
+    - slot{"cuisine": "italian"}
+    - utter_ask_budget
+* restaurant_search{"min_range": "700", "max_range": "10000"}
+    - slot{"max_range": "10000"}
+    - slot{"min_range": "700"}
+    - action_restaurant
+    - slot{"location": "Bengaluru"}
+    - utter_ask_for_email_to_send
+* send_mail
+    - utter_ask_email_address
+* send_mail{"emailid": "manhojkummar@gmail.com"}
     - slot{"emailid": "manhojkummar@gmail.com"}
     - action_send_email
     - utter_email_sent
